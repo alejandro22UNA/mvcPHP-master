@@ -1,0 +1,39 @@
+/* Imports */
+.datepicker-controls .select-month input{
+    border:none !important;
+}
+.datepicker-controls .select-year input{
+    border:none !important;
+}
+
+.datepicker-date-display{
+    background-color:#2677a6fa;
+}
+.datepicker-table td.is-selected{
+     background-color:#2677a6fa;
+}
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done{
+    color:#2677a6fa;
+    border: solid 1px;
+    border-radius: 8px;
+    margin: 3px;
+}
+.row{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+th{
+    padding: 0px 0px 2px 0px !important;
+}
+td{
+    padding: 10px 4px 10px 4px !important;
+}
+input{
+    border:solid 1px #ccc !important;
+    border-radius: 8px !important;
+    padding-left: 10px !important;
+    border-bottom: 1px solid #ccc !important;
+}
+.input-field {
+    margin-top: 0px !important;
+}

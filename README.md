@@ -1,5 +1,5 @@
 # mvcPHP
-CRUD MVC con PHP, Bootstrap y MySQL
+CRUD MVC con PHP, Materialize y MySQL
 De la Teoría a la Práctica en Diseño de Bases de Datos
 
 1.	Entendiendo el MVC con un CRUD
@@ -12,7 +12,7 @@ En computación CRUD es el acrónimo de Crear, Leer, Actualizar y Borrar (del or
 
 Un framework es simplemente la forma de organizar el desarrollo de una aplicación, es un esquema (un esqueleto, un patrón).  Los framework CSS facilitan el diseño de interfaz de usuario, para que esta sea capaz de adaptarse a los distintos navegadores, configuraciones o incluso dispositivos; la selección de un framework de apoyo puede ahorrar mucho tiempo y esfuerzo, no son un sustituto para saber cómo funciona el CSS.
 
-Existen diversas alternativas de Framework CSS, en esta práctica se utilizará Twitter Bootstrap, que es un framework o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones Web que se constituye en uno de los más populares de GitHub. Contiene plantillas de diseño con tipografía, formularios, botones, cuadros, menús de navegación y otros elementos de diseño basado en HTML y CSS, así como, extensiones de JavaScript opcionales adicionales [1].
+Existen diversas alternativas de Framework CSS, en esta práctica se utilizará Materialize, que es un framework o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones Web que se constituye en uno de los más populares de GitHub. Contiene plantillas de diseño con tipografía, formularios, botones, cuadros, menús de navegación y otros elementos de diseño basado en HTML y CSS, así como, extensiones de JavaScript opcionales adicionales [1].
 
 1.3 ¿Qué es PHP?
 
@@ -39,38 +39,8 @@ Atom, el editor de texto creado por Github disponible en: https://atom.io/ [4] s
 
 XAMPP es una herramienta de software libre, que consiste principalmente en el sistema de gestión de bases de datos MySQL, el servidor Web Apache y los intérpretes para lenguajes de script: PHP y Perl [6].  El nombre proviene del acrónimo de X (para cualquiera de los diferentes sistemas operativos – es una herramienta multiplataforma), Apache, MySQL, PHP, Perl. Desde la versión "5.6.15", XAMPP cambió la base de datos de MySQL A MariaDB.  El cual es un fork de MySQL con licencia GPL [7].
 
-2.	Creando un CRUD con MySQL/MariaDB, Framework Twitter Bootstrap y PHP (MVC)
+2.	Creando un CRUD con MySQL/MariaDB, Framework Materializecss y PHP (MVC)
 
-2.1 Primeros pasos:
 
-1.	Instalar editor Atom en Windows: 
 
-Documentación del sitio oficial:
-http://flight-manual.atom.io/getting-started/sections/installing-atom/ 
-
-Otras fuentes:
-Descubriendo Atom:
-https://www.youtube.com/watch?v=mVrOU-yi5Jg 
-
-Paquetes a utilizar en Atom:
-https://www.youtube.com/watch?v=TS_qrEzP9fE 
-
-Los Themes de Atom:
-https://www.youtube.com/watch?v=wRljEKVZALo 
-
-2.	Instalando XAMPP en Windows
-
-Documentación del sitio oficial:
-https://www.apachefriends.org/es/faq_windows.html 
-
-Otras fuentes:
-
-Como instalar XAMPP en Windows:
-https://www.youtube.com/watch?v=7oFXfcPP9CE 
-
-3.	Instalando DBdesigner Fork
-
-DBdesinger Fork es un programa diseñador de bases de datos de forma visual, enfocado al desarrollo de Script SQL para: Firebird/InterBase, Microsoft SQL Server, MySQL/MariaDB, Oracle, PostgreSQL o SQLite.  Su descarga para Windows se encuentra disponible en: https://sourceforge.net/projects/dbdesigner-fork/ 
-
-Al descargar la versión, solo debe descomprimir el archivo .zip: DBDesignerFork-1.5-bin-i386-win32-beta5.zip y ejecutar el archivo: DBDesignerFork.exe al interior de la carpeta /bin de las carpetas y archivos descomprimidos.
 

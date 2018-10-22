@@ -37,3 +37,14 @@ input{
 .input-field {
     margin-top: 0px !important;
 }
+#divOculto{
+    z-index: 10;
+}
+.collection{
+    margin: 1px !important;
+}
+
+.collection-item{
+    padding-top:1px !important;
+    padding-bottom: 1px !important; 
+}

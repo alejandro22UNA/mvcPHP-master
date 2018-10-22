@@ -123,19 +123,22 @@ class Reportes
            // $stm->execute(array($cedula_paciente));
 			//$array = $stm->fetchAll(PDO::FETCH_OBJ);
 			$pdf->AliasNbPages();
-            $pdf->AddPage();
+			$pdf->AddPage();
+			$pdf->Header();
             $pdf->SetFont('Arial','B',12);
             $content ='';
             foreach($data as $row) {
             $pdf->SetFillColor(153,255,153);
-            $pdf->SetTextColor(0);
-            $pdf->Cell(30,10,$row['cedula_paciente']);
-            $pdf->Cell(20,10,$row['nombre_paciente']);
-            $pdf->Cell(22,10,$row['apellido_1']);
-            $pdf->Cell(24,10,$row['apellido_2']);
-            $pdf->Cell(26,10,$row['fecha_nacimiento']);
-            $pdf->Cell(28,10,$row['telefono_paciente']);
-            $pdf->Cell(30,10,$row['direccion_paciente']);
+			$pdf->SetTextColor(0);
+			//$pdf->Cell(28,10,'Información Personal del Paciente');
+            $pdf->Cell(1,10,$row['cedula_paciente']);
+            $pdf->Cell(1,20,$row['nombre_paciente']);
+            $pdf->Cell(1,30,$row['apellido_1']);
+            $pdf->Cell(1,40,$row['apellido_2']);
+            $pdf->Cell(1,53,$row['fecha_nacimiento']);
+            $pdf->Cell(1,60,$row['telefono_paciente']);
+			$pdf->Cell(1,65,$row['direccion_paciente']);
+			$pdf->Footer();
            // $pdf->Cell(40, 40,array($row['cedula_paciente'], $fila['nombre_paciente'], $fila['apellido_1'], $fila['apellido_2']));
         }
             $pdf->Output();

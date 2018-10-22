@@ -35,7 +35,7 @@
         </div>
         <div class="form-group col s6">
             <label for="telefono_paciente">Telefono</label>
-            <input type="text" name="telefono_paciente" value="<?php echo $pac->telefono_paciente; ?>" class="form-control" placeholder="Apellido"  />
+            <input type="number" name="telefono_paciente" value="<?php echo $pac->telefono_paciente; ?>" class="form-control" placeholder="Telefono"  />
         </div>
     </div>
 

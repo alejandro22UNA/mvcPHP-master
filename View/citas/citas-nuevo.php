@@ -1,22 +1,23 @@
 
 
 
-
+<script src="assets/js/functions.js"></script>
   <div class="row">
     <div class="container">
     <h4 class="center">
         Registrar Cita
     </h4>
-    <br> 
+    <br>
+    <h5>Buscar por Cedula o Nombre:</h5><br>
     <form class="col s12" id="frm-producto" action="?c=citas&a=Guardar" method="post" enctype="multipart/form-data">
       <div class="row">
         <div class="input-field col s4">
-          <input id="cedula_paciente" type="number"   onkeyup="realizaProceso($('#cedula_paciente').val())" placeholder="Cedula Paciente">
+          <input id="cedula_paciente" type="text"   onkeyup="realizaProceso($('#cedula_paciente').val())" placeholder="Busqueda por Nombre o Cedula" value="">
           
         </div> 
           <div class="col s8">
             
-            <select class="browser-default" id="select_cedula_paciente" name="select_cedula_paciente_cita" value="<?php echo $cit->select_cedula_paciente_cita; ?>" >
+            <select class="browser-default" id="select_cedula_paciente" name="select_cedula_paciente_cita" value="<?php echo $cit->select_cedula_paciente_cita; ?>" onchange="copyValue()" onclick="copyValue()">
               <option value="" >Selecionar Cedula</option>
             </select>
           </div>        
@@ -55,5 +56,5 @@
     </form>
     </div>
   </div>
-  <script src="assets/js/functions.js"></script>
+  
 

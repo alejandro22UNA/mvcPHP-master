@@ -65,11 +65,11 @@ class PacientesController{
         $pac->fecha_nacimiento = $_REQUEST['fecha_nacimiento'];
         $pac->telefono_paciente = $_REQUEST['telefono_paciente'];
         $pac->direccion_paciente = $_REQUEST['direccion_paciente'];
-        $pac->codigo_expediente = $_REQUEST['codigo_expediente'];
+       // $pac->codigo_expediente = $_REQUEST['codigo_expediente'];
         $pac->observacion_paciente = $_REQUEST['observacion_paciente'];
 
         $this->model->Actualizar($pac);
-
+        
         header('Location: index.php?c=pacientes');
     }
 

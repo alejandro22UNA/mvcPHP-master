@@ -80,9 +80,8 @@ class paciente
                         fecha_nacimiento=?,
 						telefono_paciente=?,
 						direccion_paciente=?,
-						observaciones_paciente=?,
-						codigo_expediente = ?,
-				        WHERE cedula_paciente = ?";
+						observaciones_paciente=?
+				        WHERE cedula_paciente=?";
 
 			$this->pdo->prepare($sql)
 			     ->execute(
@@ -94,7 +93,6 @@ class paciente
 						$data->telefono_paciente,
 						$data->direccion_paciente,
 						$data->observacion_paciente,
-						$data->codigo_expediente,
                         $data->cedula_paciente
 					)
 				);

@@ -5,7 +5,7 @@
         Reportes
         </h3>
     
-    <form class="col s12" id="frm-producto" action="?c=reportes&a=Guardar" method="post" enctype="multipart/form-data">
+    <form class="col s12" id="frm-producto" action="?c=reportes&a=Informacion_personal&cedula_paciente=402140420" method="post" enctype="multipart/form-data">
       <div class="row">
         <div class="input-field col s4">
           <input id="cedula_paciente" type="number"   onkeyup="realizaProceso($('#cedula_paciente').val())" placeholder="Buscar por Cedula">
@@ -22,7 +22,7 @@
         <div class="col s2">
         <p>
             <label>
-                <input type="checkbox" class="filled-in" id="informacion_personal" onchange="informacionPersonal($('#select_cedula_paciente').val())"/>
+                <input type="checkbox" class="filled-in" id="informacion_personal" />
                 <span>Información Personal</span>
             </label>
         </p>

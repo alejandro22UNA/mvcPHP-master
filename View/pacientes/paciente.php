@@ -1,6 +1,34 @@
 <h4 class="page-header">Mis Pacientes </h4>
+<script src="assets/js/pagination.js"></script>
+<script src="assets/js/functions.js"></script>
 
-<table class="table table-striped highlight">
+<!-- <select class="browser-default" id="select_numero_filas" name="select_numero_filas" value="" onchange="cambiarLongitudFilas($('#select_numero_filas').val())" >
+<option value="" >Selecionar </option>
+<option value="10" >10 </option>
+<option value="20" >20 </option>
+</select> -->
+
+    <div class="row">
+        <br>
+        <i class="material-icons" onclick="buscar()" >search</i> 
+    </div>
+<div id="divOculto" class="row white z-depth-1">
+    <br>
+    <div class="input-field col s10">
+            <input id="cedula_paciente" type="text" style="width:100% !important;"  onkeyup="filtrar_paciente($('#cedula_paciente').val())" placeholder="Busqueda por Nombre o Cedula" value="">   
+    </div>
+    <div class="col s2">
+        <div class="center">
+            <button class="btn" onclick="cerrar()">Cerrar</button>
+        </div> 
+    </div>
+    <div id="myDiv">  
+    </div>
+
+</div>
+
+
+<table class="table table-striped highlight" id="miTabla">
     <thead>
         <tr>
             <th>Cedula</th>
@@ -16,7 +44,7 @@
             <th >Eliminar</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
     <?php foreach($this->model->Listar() as $r): ?>
         <tr>
             <td><?php echo $r->cedula_paciente; ?></td>
@@ -36,5 +64,12 @@
             </td>
         </tr>
     <?php endforeach; ?>
+    
     </tbody>
 </table>
+<div class="col-md-12 center text-center">
+	<span class="left" id="total_reg"></span>
+    <ul class="pagination pager" id="myPager"></ul>
+</div>
+  
+

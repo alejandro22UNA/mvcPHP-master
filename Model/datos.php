@@ -22,7 +22,9 @@ if($value == 1){
    //$sql = "SELECT cedula_paciente FROM tbl_pacientes WHERE cedula_paciente LIKE '".$cedula."%' ";
     $sql = "SELECT cedula_paciente,nombre_paciente,apellido_1 
     FROM tbl_pacientes AS pacientes 
-    WHERE pacientes.cedula_paciente LIKE '%".$cedula."%' GROUP by cedula_paciente ";
+    WHERE pacientes.cedula_paciente LIKE '%".$cedula."%' 
+    OR pacientes.nombre_paciente LIKE '%".$cedula."%' 
+    OR pacientes.apellido_1 LIKE '%".$cedula."%'  GROUP by cedula_paciente ";
         if (!$resultado = $mysqli->query($sql)) {
         
             echo "Lo sentimos, este sitio web está experimentando problemas.";
@@ -154,5 +156,47 @@ if($value == 1){
     $resultado->free();
     $mysqli->close();
 }
+
+
 }
+
+if($value == 3){
+    $cedula = $_POST['filtro'];
+   //$sql = "SELECT cedula_paciente FROM tbl_pacientes WHERE cedula_paciente LIKE '".$cedula."%' ";
+    $sql = "SELECT cedula_paciente,nombre_paciente,apellido_1 
+    FROM tbl_pacientes AS pacientes 
+    WHERE pacientes.cedula_paciente LIKE '%".$cedula."%' 
+    OR pacientes.nombre_paciente LIKE '%".$cedula."%' 
+    OR pacientes.apellido_1 LIKE '%".$cedula."%'  GROUP by cedula_paciente ";
+        if (!$resultado = $mysqli->query($sql)) {
+        
+            echo "Lo sentimos, este sitio web está experimentando problemas.";
+            echo "Error: La ejecución de la consulta falló debido a: \n";
+            echo "Query: " . $sql . "\n";
+            echo "Errno: " . $mysqli->errno . "\n";
+            echo "Error: " . $mysqli->error . "\n";
+            exit;
+        }
+
+        if ($resultado->num_rows === 0) {
+            echo '<option value="">Sin Registros</option>';;
+            exit;
+        }
+        if ($resultado->num_rows >= 0) {
+            while($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
+                $Array[] = $row;
+                echo '<ul class="collection" style="width:100% !important;"><li class="collection-item"><p style="margin:5px;"><strong>Ced: '.$row["cedula_paciente"].'</strong><br> Nombre:  '.$row["nombre_paciente"].' '.$row["apellido_1"].'  <a href="?c=pacientes&a=Crud&cedula='.$row["cedula_paciente"].'"><br>Ver Mas...</a></p></li> </ul>';
+            }
+            exit;
+        }
+
+        $result = $resultado->fetch_assoc();
+        //echo $result['cedula_paciente'];
+
+        // El script automáticamente liberará el resultado y cerrará la conexión
+        // a MySQL cuando finalice, aunque aquí lo vamos a hacer nostros mismos
+        $resultado->free();
+        $mysqli->close();
+}
+
 ?>

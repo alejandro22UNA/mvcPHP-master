@@ -6,13 +6,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
          <!-- Compiled and minified CSS -->
-    <script src="assets/js/jquery.js"></script>
+    <!-- <script src="assets/js/jquery.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     
     <script src="assets/js/materialize.js"></script>
     <link rel="shortcut icon" href="assets/img/favicon.jpg">
     <link rel="stylesheet" href="assets/css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-    <link rel="stylesheet" href="assets/css/style.css">  
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/pagination.js"></script>
 	</head>
     <body>
     
